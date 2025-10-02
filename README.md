@@ -202,18 +202,6 @@ This frontend is designed to showcase:
 4. **Scalable Architecture** - Clean, maintainable code
 5. **User Experience** - Smooth interactions and feedback
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
 
 This project is part of the UpEnergy Hedera Hackathon submission.
 
----
-
-**Built with ❤️ for the Hedera Hackathon**
