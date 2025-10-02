@@ -1,6 +1,6 @@
 # UpEnergy Carbon Credit Marketplace - Frontend
 
-A modern React frontend for the UpEnergy Carbon Credit Tokenization Platform, built for the Hedera Hackathon.
+A modern React frontend for the UpEnergy Carbon Credit Tokenization Platform.
 
 ## 🚀 Features
 
