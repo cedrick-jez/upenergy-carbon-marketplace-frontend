@@ -1,70 +1,219 @@
-# Getting Started with Create React App
+# UpEnergy Carbon Credit Marketplace - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React frontend for the UpEnergy Carbon Credit Tokenization Platform, built for the Hedera Hackathon.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### User Management
+- **Role-based Authentication** - Admin and Investor roles
+- **Profile Management** - Update personal information
+- **Hedera Account Integration** - Create and manage blockchain accounts
 
-### `npm start`
+### Token Management
+- **Token Viewing** - Browse all carbon credit tokens with metadata
+- **Marketplace** - Buy and sell tokens in a secure marketplace
+- **Portfolio Management** - Track owned tokens and trading history
+- **Advanced Filtering** - Search by country, status, and other criteria
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Admin Features
+- **Dashboard** - Comprehensive overview of platform statistics
+- **Token Creation** - Generate new tokens from distribution data
+- **Account Management** - Monitor all Hedera accounts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Modern UI/UX
+- **Responsive Design** - Works on desktop, tablet, and mobile
+- **Material-UI Components** - Professional, accessible interface
+- **Real-time Updates** - Live data synchronization
+- **Intuitive Navigation** - Easy-to-use interface
 
-### `npm test`
+## 🛠️ Technology Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React 18** - Modern React with hooks
+- **Material-UI (MUI)** - Professional component library
+- **React Router** - Client-side routing
+- **Axios** - HTTP client for API communication
+- **Context API** - State management for authentication
 
-### `npm run build`
+## 📦 Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Start Development Server**
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Build for Production**
+   ```bash
+   npm run build
+   ```
 
-### `npm run eject`
+## 🔧 Configuration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The frontend connects to the backend API running on `http://localhost:3000`. Make sure the backend server is running before starting the frontend.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Environment Variables
+Create a `.env` file in the root directory:
+```env
+REACT_APP_API_URL=http://localhost:3000
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📱 Pages & Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Home Page
+- Hero section with platform overview
+- Feature highlights
+- Call-to-action buttons
+- Platform statistics
 
-## Learn More
+### Login Page
+- Role selection (Admin/Investor)
+- Simple authentication (demo mode)
+- Profile creation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Dashboard
+- Platform statistics overview
+- Recent token activity
+- Account information
+- Quick actions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Marketplace
+- **All Tokens** - Browse complete token catalog
+- **Marketplace** - View tokens available for sale
+- **My Tokens** - Personal portfolio view
+- Advanced filtering and search
 
-### Code Splitting
+### Profile
+- Personal information management
+- Hedera account details
+- Account settings
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Account Creation
+- Generate new Hedera testnet accounts
+- Copy account credentials
+- Account management
 
-### Analyzing the Bundle Size
+## 🎨 Design System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Color Palette
+- **Primary Green**: #2E7D32 (UpEnergy brand)
+- **Secondary Orange**: #FF6F00 (Accent color)
+- **Success**: #4CAF50
+- **Info**: #2196F3
+- **Warning**: #FF9800
+- **Error**: #F44336
 
-### Making a Progressive Web App
+### Typography
+- **Font Family**: Roboto, Helvetica, Arial
+- **Weights**: 400 (regular), 500 (medium), 600 (semi-bold), 700 (bold)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Components
+- Rounded corners (8-12px border radius)
+- Consistent spacing
+- Hover effects and transitions
+- Responsive grid system
 
-### Advanced Configuration
+## 🔐 Authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The app uses a simple authentication system for demo purposes:
 
-### Deployment
+- **Admin Role**: Full access to all features including token creation
+- **Investor Role**: Access to marketplace and portfolio features
+- **Session Management**: Local storage for user data
+- **Protected Routes**: Role-based access control
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📊 API Integration
 
-### `npm run build` fails to minify
+The frontend integrates with the following backend endpoints:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Account Management
+- `GET /accounts/create` - Create new Hedera account
+- `GET /accounts/list` - List all accounts
+
+### Token Management
+- `GET /tokens/create` - Create tokens from distribution data
+- `GET /tokens/upenergy` - Get all UpEnergy tokens
+- `GET /tokens/market` - Get tokens for sale
+- `GET /tokens/sell?tokenId=X` - Mark token for sale
+- `GET /tokens/buy?tokenId=X&buyerAccount=Y` - Buy token
+
+## 🚀 Deployment
+
+### Build for Production
+```bash
+npm run build
+```
+
+### Deploy to Netlify/Vercel
+1. Connect your GitHub repository
+2. Set build command: `npm run build`
+3. Set publish directory: `build`
+4. Deploy!
+
+### Environment Variables for Production
+```env
+REACT_APP_API_URL=https://your-backend-api.com
+```
+
+## 🧪 Testing
+
+```bash
+# Run tests
+npm test
+
+# Run tests with coverage
+npm test -- --coverage
+```
+
+## 📝 Development Notes
+
+### Project Structure
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Auth/           # Authentication components
+│   ├── Layout/         # Layout components
+│   ├── Tokens/         # Token-related components
+│   └── Accounts/       # Account management components
+├── contexts/           # React contexts
+├── pages/              # Page components
+├── services/           # API services
+└── App.js             # Main app component
+```
+
+### Key Features Implemented
+- ✅ User authentication and role management
+- ✅ Token viewing with metadata display
+- ✅ Buy/sell token functionality
+- ✅ Hedera account creation interface
+- ✅ Admin dashboard with statistics
+- ✅ Responsive design and modern UI
+- ✅ API integration with backend
+
+## 🎯 Hackathon Focus
+
+This frontend is designed to showcase:
+1. **Professional UI/UX** - Modern, intuitive interface
+2. **Blockchain Integration** - Seamless Hedera account management
+3. **Real-time Data** - Live token marketplace
+4. **Scalable Architecture** - Clean, maintainable code
+5. **User Experience** - Smooth interactions and feedback
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is part of the UpEnergy Hedera Hackathon submission.
+
+---
+
+**Built with ❤️ for the Hedera Hackathon**
